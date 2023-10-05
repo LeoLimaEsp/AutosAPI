@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using ProyectoPractica_API;
 using ProyectoPractica_API.Datos;
+using ProyectoPractica_API.Repositorio;
+using ProyectoPractica_API.Repositorio.IRepositorio;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +21,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 
 //Agregado de nuevo servicio para mapeo:
 builder.Services.AddAutoMapper(typeof(MappingConfig));
+
+//Registro para la parte de servicio
+builder.Services.AddScoped<IProyectoRepositorio, ProyectoRepositorio>();
 
 var app = builder.Build();
 
