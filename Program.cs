@@ -24,6 +24,7 @@ builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 //Registro para la parte de servicio
 builder.Services.AddScoped<IProyectoRepositorio, ProyectoRepositorio>();
+builder.Services.AddScoped<INumeroProyectoRepositorio, NumeroProyectoRepositorio>();
 
 var app = builder.Build();
 

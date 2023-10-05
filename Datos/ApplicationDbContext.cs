@@ -12,6 +12,7 @@ namespace ProyectoPractica_API.Datos
         }
 
         public DbSet<Proyecto> Autos { get; set; }
+        public DbSet<NumeroProyecto> numeroProyectos { get; set; }
 
         //Creación de registros en tabla:
         protected override void OnModelCreating(ModelBuilder modelBuilder)

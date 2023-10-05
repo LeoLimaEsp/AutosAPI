@@ -13,6 +13,10 @@ namespace ProyectoPractica_API
 
             CreateMap<Proyecto, ProyectoDtoCreate>().ReverseMap();
             CreateMap<Proyecto, ProyectoDtoUpdate>().ReverseMap();
+
+            CreateMap<NumeroProyecto, NumeroDto>().ReverseMap();
+            CreateMap<NumeroProyecto, NumeroDtoCreate>().ReverseMap();
+            CreateMap<NumeroProyecto, NumeroDtoUpdate>().ReverseMap();
         }
 
     }
